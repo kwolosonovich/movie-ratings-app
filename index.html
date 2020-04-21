@@ -3,14 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="movies.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Notable&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+
+  <script src="http://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
     <title>Document</title>
+
+    <style>
+     
+    </style>
+
 </head>
-    <h1 class="header">Movie Ratings</h1>
+    
 <body>
-    <img src="images/main.jpg" alt="movie wheel">
-    <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@jdent?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Jason Dent"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Jason Dent</span></a>
-    <img src="images/footer.jpg" alt="movie wheel">
-    <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@peterlewicki?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Peter Lewicki"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Peter Lewicki</span></a>
+    <hr>
+    <h1>Movie Ratings</h1>
+    <hr>
+
+    <div class="pic-container">
+        <img class="lg-pic" src="images/main.jpg" alt="movie wheel">
+            <table>
+                <tr>
+                    <th><h4>Movie Title</h4></th>
+                    <th><h4>Rating</h4></th>
+                </tr>
+                   <th>ovie Title</th>
+                    <th>Rating</th>
+
+            </table>
+
+            <div class="bottom-right">
+                <a style="background-color: rgba(255, 255, 255, 0.562);color:black;text-decoration:none;padding:3px 3px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:10px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@jdent?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free photos from Jason Dent"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:grey" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:1px 2px">Jason Dent</span></a>
+            </div>
+    </div>
+
+    <hr>
+
+    <div id="new-movie">
+
+        <div class="form-Container">
+        <form>
+            <label for="movie-title"><h3>Movie Title</h3></label> 
+            <br>
+            <input type="text" id="movie-title">
+            <br>
+            <label class="labels" for="rating">
+                <p class="p1">Don't waste your money</p>
+                <p class="p2">Mediocre time-killer</p>
+                <p class="p3">A must see!</p>
+            </label> 
+            <div id="slider"></div>
+
+            <button id="submit-movie" type="submit">Submit Rating</button>
+
+            </form>
+        </div>
+    </div>
+    <hr>
+    
+
+    <script>
+    $(document).ready(function() {
+
+
+    $( "#slider" ).slider({step: 1, max:10, animate: "slow", value: "5"})
+    $('#submit-movie').submit(function(e) {
+        return e
+        e.preventDefault();
+        let title = $('#movie-title').value()
+        console.log(title)
+    })
+    })
+    
+    
+
+    </script>
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+
 </body>
 </html>

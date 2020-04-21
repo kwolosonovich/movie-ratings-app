@@ -1,0 +1,96 @@
+body {
+  position: relative;
+  display: inline-block;
+  background-color: #ececec;
+  width: 100%;
+  margin: 0px;
+  text-align: center;
+}
+
+.lg-pic {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+}
+.pic-container {
+  position: relative;
+}
+h1 {
+  font-size: 40px;
+  margin: 40px;
+}
+h1,
+h2,
+h4 {
+  color: #53354a;
+  font-family: "Notable", sans-serif;
+  animation: none;
+}
+hr {
+  width: 70%;
+}
+
+p {
+  width: 100px;
+  display: inline-block;
+  vertical-align: text-bottom;
+  vertical-align: baseline;
+}
+.p1 {
+  margin-left: 0px;
+  float: left;
+}
+.p3 {
+  margin-right: 0px;
+  float: right;
+}
+
+.form-Container {
+  color: #53354a;
+  width: 60%;
+  display: inline-block;
+  font-family: "Montserrat", sans-serif;
+}
+table {
+  font-family: "Montserrat", sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-height: 100%;
+  width: 50%;
+  background-color: rgba(255, 255, 255, 0.562);
+  color: rgba(0, 0, 0, 0.733);
+  border: 3px 0px solid rgba(31, 17, 17, 0.308);
+}
+th {
+  padding: 0px;
+  width: 50%;
+}
+tr {
+  padding: 0px;
+  padding-bottom: auto;
+  font-size: 20px;
+  border-bottom: 3px solid black;
+}
+
+button {
+  display: block;
+  margin: 0px auto;
+  width: 20%;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 20px;
+  color: #53354a;
+  background-color: #53354a1e;
+  cursor: pointer;
+  font-weight: bold;
+}
+button:hover {
+  background-color: #53354a4b;
+}
