@@ -9,6 +9,9 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
 
+
+      
+
   <script src="http://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -30,13 +33,12 @@
 
     <div class="pic-container">
         <img class="lg-pic" src="images/main.jpg" alt="movie wheel">
-            <table>
+            <table id="t">
                 <tr>
                     <th><h4>Movie Title</h4></th>
                     <th><h4>Rating</h4></th>
                 </tr>
-                   <th>ovie Title</th>
-                    <th>Rating</th>
+             
 
             </table>
 
@@ -71,22 +73,38 @@
     
 
     <script>
-    $(document).ready(function() {
-
 
     $( "#slider" ).slider({step: 1, max:10, animate: "slow", value: "5"})
-    $('#submit-movie').submit(function(e) {
-        return e
-        e.preventDefault();
-        let title = $('#movie-title').value()
-        console.log(title)
-    })
-    })
     
-    
+    $(document).ready(function() {
 
+    $( "#slider" ).slider({step: 1, max:10, animate: "slow", value: "5"})
+
+    $('#submit-movie').on("click", function(e) {
+        e.preventDefault(); 
+        let title = $('#movie-title').val()
+        if (title.split(" ").length < 2) {
+            alert('Title must be at least two words')
+        } else {
+            let rating = $('#slider').slider("option", "value")
+            function addMovieRating(title, rating){
+            
+            let structure = `<tr><td>${title}</td><td>${rating}</td></tr>`
+            // append to table
+            $("#t").append(structure)
+            
+        }
+        addMovieRating(title, rating)
+        }       
+        })
+    })
+
+   
     </script>
+        <script src="assets/jquery-ui-master/ui/widgets/slider.js"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+          <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 
 </body>
