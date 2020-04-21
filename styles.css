@@ -5,14 +5,27 @@ body {
   width: 100%;
   margin: 0px;
   text-align: center;
+  font-family: "Manrope", sans-serif;
 }
-
 .lg-pic {
   position: relative;
   width: 100%;
   height: auto;
 }
-
+.artistLabel {
+  background-color: rgba(255, 255, 255, 0.562);
+  color: black;
+  text-decoration: none;
+  padding: 3px 3px;
+  font-family: "Manrope", sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 1.2;
+  display: inline-block;
+  border-radius: 3px;
+  display: inline-block;
+  padding: 2px 3px;
+}
 .bottom-right {
   position: absolute;
   bottom: 8px;
@@ -21,21 +34,32 @@ body {
 .pic-container {
   position: relative;
 }
-h1 {
-  font-size: 40px;
-  margin: 40px;
-}
 h1,
 h2,
 h4 {
   color: #53354a;
   font-family: "Notable", sans-serif;
-  animation: none;
+}
+h1 {
+  font-size: 45px;
+  margin: 40px;
+}
+h4 {
+  font-size: 34px;
+}
+h3 {
+  font-weight: bold;
+  font-size: 28pt;
+  margin-bottom: 0px;
 }
 hr {
   width: 70%;
+  border-top: 2px solid #53354a;
 }
-
+i {
+  font-size: 50px;
+  margin: 30px;
+}
 p {
   width: 100px;
   display: inline-block;
@@ -55,16 +79,23 @@ p {
   color: #53354a;
   width: 60%;
   display: inline-block;
-  font-family: "Montserrat", sans-serif;
+  position: sticky;
+}
+#movie-title {
+  padding: 15px;
+  font-size: 20px;
+  border: 1px solid #d3d3d3;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.596);
 }
 table {
-  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   min-height: 100%;
-  width: 50%;
+  width: 60%;
   background-color: rgba(255, 255, 255, 0.562);
   color: rgba(0, 0, 0, 0.733);
   border: 3px 0px solid rgba(31, 17, 17, 0.308);
@@ -79,18 +110,20 @@ tr {
   font-size: 20px;
   border-bottom: 3px solid black;
 }
-
 button {
   display: block;
   margin: 0px auto;
   width: 20%;
-  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  border: 1px solid #53354a;
+  border-radius: 4px;
   margin-top: 20px;
   color: #53354a;
-  background-color: #53354a1e;
-  cursor: pointer;
+  background-color: #b4b4b42d;
   font-weight: bold;
+  padding: 5px;
 }
 button:hover {
   background-color: #53354a4b;
+  cursor: pointer;
 }
