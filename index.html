@@ -31,7 +31,7 @@
                 </th>
             </tr>
         </table>
-
+  
         <div class="bottom-right">
             <a class="artistLabel"
                 href="https://unsplash.com/@jdent?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge"
@@ -71,10 +71,10 @@
     <hr />
 
     <script>
-        $("#slider").slider({ step: 1, max: 10, animate: "slow", value: "5" });
 
         $(document).ready(function () {
             $("#slider").slider({ step: 1, max: 10, animate: "slow", value: "5" });
+
             $("#submit-movie").on("click", function (e) {
                 e.preventDefault();
 
@@ -90,11 +90,21 @@
                     return false;
                 }
                 let rating = $("#slider").slider("option", "value");
-                let addMovieRating = (title, rating) => {
-                    let structure = `<tr><td>${title}</td><td>${rating}</td></tr>`;
-                    $("#t").append(structure);
+                let addMovieRating = (title, rating) => {    
+                            
+                 let uuid = Math.random()
+
+                    let structure = `<tr name="${uuid}"><td>${title}</td><td>${rating}</td></tr>`;
+
+
+                    $("#t").append(structure)
+                    let newStructure = $(`tr[name="${uuid}"`).addClass('remove-hover')
+                    .addClass('rmTr')
+                    .on("click", function() {
+                       $(this).fadeOut(1000, "linear")
+                })
                 }
-                addMovieRating(title, rating);
+                addMovieRating(title, rating);            
             });
         });
     </script>

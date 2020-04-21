@@ -74,7 +74,33 @@ p {
   margin-right: 0px;
   float: right;
 }
+table {
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-height: 100%;
+  width: 60%;
+  background-color: rgba(255, 255, 255, 0.562);
+  color: rgba(0, 0, 0, 0.733);
+  border: 3px 0px solid rgba(31, 17, 17, 0.308);
+}
 
+th {
+  padding: 0px;
+  width: 50%;
+}
+tr {
+  padding: 0px;
+  padding-bottom: auto;
+  font-size: 20px;
+  border-bottom: 3px solid black;
+}
+.remove-hover:hover {
+  cursor: pointer;
+  color:  #53354a;
+}
 .form-Container {
   color: #53354a;
   width: 60%;
@@ -88,28 +114,7 @@ p {
   border-radius: 4px;
   background: rgba(255, 255, 255, 0.596);
 }
-table {
-  font-weight: bold;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  min-height: 100%;
-  width: 60%;
-  background-color: rgba(255, 255, 255, 0.562);
-  color: rgba(0, 0, 0, 0.733);
-  border: 3px 0px solid rgba(31, 17, 17, 0.308);
-}
-th {
-  padding: 0px;
-  width: 50%;
-}
-tr {
-  padding: 0px;
-  padding-bottom: auto;
-  font-size: 20px;
-  border-bottom: 3px solid black;
-}
+
 button {
   display: block;
   margin: 0px auto;
